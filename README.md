@@ -1,0 +1,2 @@
+# JSPWgen-NJE
+A password randomizer built in Javascript. While the goal of the generator is to provide a secure password based on various criteria, please understand: I AM NOT a security expert, nor even a security novice! This is merely a school project for the UCONN Coding Bootcamp, and UNDER NO CIRCUMSTANCES should the passwords it generates actually be considered "secure!" Use them at your own risk!
