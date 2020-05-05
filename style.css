@@ -1,0 +1,42 @@
+body {
+    background-color: #1e1b20;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+#wrapper {
+    width: 31rem;
+    margin: auto;
+}
+
+h1 {
+    margin: 1.5rem;
+    color: #cfcfcf;
+}
+
+p {
+    margin: 1.5rem;
+    color:#dddddd;
+}
+
+button {
+    background: rgb(74, 199, 122);
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1.5rem 2rem;
+    margin: 1rem auto;
+    border-radius: 15px;
+    border-width: 5px;
+}
+
+#passBox {
+    width: 28rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: rgb(74, 199, 122);
+}
