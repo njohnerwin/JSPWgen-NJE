@@ -12,6 +12,8 @@ body {
 h1 {
     margin: 1.5rem;
     color: #cfcfcf;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 h2 {
@@ -24,6 +26,7 @@ h2 {
 p {
     margin: 1.5rem;
     font-size: 20px;
+    line-height: 1.6rem;
     color:#dddddd;
 }
 
@@ -51,9 +54,8 @@ button:active {
     width: 28rem;
     background: rgba(255, 255, 255, 0.5);
     margin: 1.5rem auto 0.5rem auto;
-    border-radius: 10px;
-    border-style: dashed;
-    border-color: rgb(74, 199, 122);
+    padding: 1.5rem;
+    border-radius: 20px;
 }
 
 #passBox {
