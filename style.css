@@ -20,7 +20,7 @@ p {
 }
 
 button {
-    background: rgb(74, 199, 122);
+    background: rgb(76, 204, 90);
     font-family: 'Oswald', sans-serif;
     color: white;
     font-weight: bold;
@@ -31,12 +31,24 @@ button {
     border-width: 5px;
 }
 
-#passBox {
+button:hover {
+    background: rgb(90, 221, 105);
+}
+
+button:active {
+    background: rgb(63, 170, 74);
+}
+
+#passBoxWrapper {
     width: 28rem;
-    height: 3rem;
     background: rgba(255, 255, 255, 0.5);
     margin: 1.5rem auto;
     border-radius: 10px;
     border-style: dashed;
     border-color: rgb(74, 199, 122);
+}
+
+#passBox {
+    font-size: 24px;
+    color: #1e1b20
 }
