@@ -1,13 +1,14 @@
 
 var validPass = false;
 var passLength = 0;
-var passLower = false;
 var passUpper = false;
+var passNum = false;
 var passSpecial = false;
 var password = "";
 var chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var upperChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var specChars = ['!', '@', '#', '$', '%', '^', '&', '*', '<', '>', '?'];
+var numChars = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var seed = 0;
 
 function getCriteria() {
@@ -22,6 +23,7 @@ function getCriteria() {
 
         else {
             passUpper = confirm("Use upper-case characters? (OK to confirm, Cancel to skip)");
+            passNum = confirm("Use numbers? (OK to confirm, Cancel to skip)");
             passSpecial = confirm("Use special characters, like ! and @? (OK to confirm, Cancel to skip)");
             validPass = true;
         }
@@ -29,16 +31,21 @@ function getCriteria() {
     }
 }
 
-function charGen (spec, up) {
+function charGen (spec, up, num) {
 
     flipper = Math.floor(Math.random() * 100);
 
-    if (spec == true && flipper >= 90) {
+    if (spec == true && flipper >= 85) {
         seed = Math.floor(Math.random() * specChars.length);
         return specChars[seed];
     }
 
-    else if (up == true && flipper >= 75) {
+    else if (num == true && flipper <= 15) {
+        seed = Math.floor(Math.random() * numChars.length);
+        return numChars[seed];
+    }
+
+    else if (up == true && flipper <= 30 && flipper >= 15) {
         seed = Math.floor(Math.random() * upperChars.length);
         return upperChars[seed];
     } 
@@ -54,7 +61,7 @@ function makePassword() {
     
     getCriteria();
     for (var i = 0; i < passLength; i++) {
-        password = (password + charGen(passSpecial, passUpper));
+        password = (password + charGen(passSpecial, passUpper, passNum));
     }
 
     return password;
