@@ -11,6 +11,8 @@ var specChars = ['!', '@', '#', '$', '%', '^', '&', '*', '<', '>', '?'];
 var numChars = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var seed = 0;
 
+//getCriteria prompts the user for several password criteria, which the generated password will follow.
+
 function getCriteria() {
 
     while (validPass == false) {
@@ -30,6 +32,9 @@ function getCriteria() {
 
     }
 }
+
+
+//charGen generates a single random character following the specified criteria
 
 function charGen (spec, up, num) {
 
@@ -57,15 +62,21 @@ function charGen (spec, up, num) {
 
 }
 
+
+//makePassword initializes password, then calls getCriteria to receive the user's specifications, then runs charGen to generate random characters until done.
+
 function makePassword() {
     
+    password = "";
     getCriteria();
+
     for (var i = 0; i < passLength; i++) {
         password = (password + charGen(passSpecial, passUpper, passNum));
     }
 
     return password;
 }
+
 
 $("#passGen").on("click", function() {
     $("#passBox").text(makePassword());
