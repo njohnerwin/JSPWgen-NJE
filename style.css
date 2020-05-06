@@ -43,7 +43,7 @@ button:active {
 #passBoxWrapper {
     width: 28rem;
     background: rgba(255, 255, 255, 0.5);
-    margin: 1.5rem auto;
+    margin: 1.5rem auto 0.5rem auto;
     border-radius: 10px;
     border-style: dashed;
     border-color: rgb(74, 199, 122);
@@ -52,4 +52,10 @@ button:active {
 #passBox {
     font-size: 24px;
     color: #1e1b20
+}
+
+#hintText {
+    font-size: 16px;
+    margin-top: 0.5rem;
+    color: #cfcfcfb7;
 }
